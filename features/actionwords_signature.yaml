@@ -1,0 +1,37 @@
+---
+- name: I am on welcome screen
+  uid: 75c8bfb4-21bc-4e33-9a72-b6f9472cfa55
+  parameters: []
+- name: I skip welcome screen
+  uid: 69e45eee-6a29-4002-95bf-dbb20b5c5bd1
+  parameters: []
+- name: page "page_title" is displayed
+  uid: 3c46321a-49e9-4b80-a7c7-db59697dc3ab
+  parameters:
+  - name: page_title
+- name: search for "topic"  article
+  uid: dff9714a-d8b3-40c2-9498-bef9d943d2f2
+  parameters:
+  - name: topic
+- name: navigate to first suggestion
+  uid: c3349cc6-564f-493a-8863-2f1eeab179cc
+  parameters: []
+- name: open the "panel_label" panel
+  uid: ee590f08-9c0f-49f2-9362-4c1ccd947546
+  parameters:
+  - name: panel_label
+- name: the history list contains "page_title" page link at index "index"
+  uid: 33471c61-2e02-40ed-b986-2029ac5fd4b3
+  parameters:
+  - name: page_title
+  - name: index
+- name: save the page
+  uid: 68552a59-3327-4585-8cfd-d340103ebb17
+  parameters: []
+- name: the bookmarked articles list should contains "p1"
+  uid: cd79805f-1ae7-4668-9fb4-e86fa809463c
+  parameters:
+  - name: p1
+- name: app opened as unregistered user
+  uid: c3f49192-2433-4981-ac42-1cb71ea653b1
+  parameters: []
