@@ -29,11 +29,14 @@ module Actionwords
 
   def open_the_panel_label_panel(panel_label)
     tap_when_element_exists("ImageView id:'wikipedia_icon'")
+    wait_for_element_exists("* id:'navdrawer'")
     tap_when_element_exists("TextView marked:'#{panel_label}'")
   end
 
   def the_history_list_contains_page_title_page_link_at_index_index(page_title, index)
-
+    wait_for_element_exists("ListView id:'history_entry_list'")
+    found_items = query("ListView id:'history_entry_list' TextView id:'history_title' index:#{index.to_i - 1}")
+    expect(found_items.first['text']).to eq page_title
   end
 
   def save_the_page
