@@ -22,11 +22,14 @@ module Actionwords
   end
 
   def navigate_to_first_suggestion
-
+    tap_when_element_exists("android.widget.ListView index:0 android.widget.TextView index:0")
+    tap_when_element_exists("android.widget.Button marked:'Got it'")
+    tap_when_element_exists("ImageView id:'search_bar_show_toc'")
   end
 
   def open_the_panel_label_panel(panel_label)
-
+    tap_when_element_exists("ImageView id:'wikipedia_icon'")
+    tap_when_element_exists("TextView marked:'#{panel_label}'")
   end
 
   def the_history_list_contains_page_title_page_link_at_index_index(page_title, index)
@@ -34,11 +37,14 @@ module Actionwords
   end
 
   def save_the_page
-
+    tap_when_element_exists("ImageView id:'search_bar_show_menu'")
+    tap_when_element_exists("TextView marked:'Save page'")
   end
 
   def the_bookmarked_articles_list_should_contains_p1(p1)
-
+    wait_for_element_exists("ListView id:'saved_pages_list'")
+    found_items = query("TextView id:'saved_page_title' marked:'Watermelon'")
+    expect(found_items.count).to eq 1
   end
 
   def app_opened_as_unregistered_user
