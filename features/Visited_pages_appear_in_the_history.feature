@@ -1,6 +1,6 @@
-Feature: Build a history
+Feature: Visited pages appear in the history
 
-  Scenario: Build a history
+  Scenario: Visited pages appear in the history
     Given app opened as unregistered user
     When search for "watermelon"  article
     And navigate to first suggestion
